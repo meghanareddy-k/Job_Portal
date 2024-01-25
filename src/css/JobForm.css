@@ -1,0 +1,19 @@
+
+.job__form {
+    width: 20%;
+    height: 40%;
+    margin: 10% 40% auto auto;
+    padding: 40px;
+
+}
+
+.job__form__inputs input{
+    width: 300px;
+    display: block;
+    margin: 20px;
+    height: 30px;
+}
+
+fieldset {
+    border-radius: 10px;
+}

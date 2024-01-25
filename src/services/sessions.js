@@ -1,0 +1,80 @@
+
+
+
+// LOGIN
+export function fetchLogin({username, userType}) {
+
+    return fetch('/api/session' , {
+        method: 'POST',
+        headers: new Headers({
+            'content-type': 'application/json'
+        }),
+        body: JSON.stringify({username, userType}),
+    })
+    .catch( () => Promise.reject({ error: 'networkError'}))
+    .then( response => {
+        if (response.ok) {
+            return response.json()
+        }
+        return response.json()
+        .catch( error => { 
+            Promise.reject({ error })
+        })
+        .then( err => Promise.reject(err)) 
+    });
+}
+
+export function fetchRegister({username, userType}) {
+    return fetch('/api/session' , {
+        method: 'PUT',
+        headers: new Headers({
+            'content-type': 'application/json'
+        }),
+        body: JSON.stringify({username, userType}),
+    })
+    .catch( () => Promise.reject({ error: 'networkError'}))
+    .then( response => {
+        if (response.ok) {
+            return response.json()
+        }
+        return response.json()
+        .catch( error => Promise.reject({ error }))
+        .then( err => Promise.reject(err)) 
+    });
+}
+
+
+
+
+// LOGOUT
+export function fetchLogout(username) {
+    return fetch('/api/session' , {
+        method: 'DELETE',
+    })
+    .catch( () => Promise.reject({ error: 'networkError'}))
+    .then( response => {
+        if (response.ok) {
+            return response.json();
+        }
+        return response.json()
+        .catch( error => Promise.reject({ error }))
+        .then( err => Promise.reject(err)) 
+    });
+}
+
+// FETCH A SESSION
+export function fetchSession() {
+    return fetch('/api/session' , {
+        method: 'GET',
+       
+    })
+    .catch( () => Promise.reject({ error: 'networkError'}))
+    .then( response => {
+        if (response.ok) {
+            return response.json();
+        }
+        return response.json()
+        .catch( error => Promise.reject({ error }))
+        .then( err => Promise.reject(err)) 
+    });
+}

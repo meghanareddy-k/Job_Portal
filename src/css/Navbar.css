@@ -1,0 +1,132 @@
+  .component__navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(100px);
+    background-color: #1DA1F2;
+  }
+  
+  .navbar__breadcrumb {
+    cursor: pointer;
+    margin-left: 40px;
+    white-space: nowrap;
+    font-weight: bolder;
+    flex: 0.3;
+  }
+  .navbar__links{
+    width: 100%;
+    margin: 0 50px;
+  }
+  .navbar__left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .navbar__left > div,
+  a {
+    padding: 0% 0% 0%;
+  }
+  
+  .navbar__cart {
+    padding-right: 2%;
+    cursor: pointer;
+  }
+  .home__link{
+      color: #000;
+      text-decoration: none;
+
+  }
+  .home__link:hover {
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0,.9);
+  }
+
+  .categories__link{
+    color: #000;
+    text-decoration: none;
+    margin-left: 50px;
+    flex: 0.4;
+  
+  }
+  .categories__link:hover {
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0,.9);
+  }
+  
+  .wishlist__link{
+    color: #000;
+    text-decoration: none;
+  }
+  .wishlist__link:hover {
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0,.9);
+  }
+
+
+  .navbar__searchbar{
+    width: 200px;
+    padding : 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #080b0c;
+    font-size: 16px;
+    color : #050706;
+    background: transparent;
+    border-radius: 5px;
+  }
+  ::placeholder {
+    color: rgb(7, 6, 6);
+    opacity: 10; /* Firefox */
+  }
+
+
+  .btn-submit-logout {
+    border-radius: 10px;
+    background-color: #020202;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 1px;
+    width: 100px;
+    height: 40px;
+    transition: all 0.4s;
+    margin: 16px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+
+  
+  .btn-submit-logout:after {
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -10px;
+  }
+  
+  .btn-submit-logout:hover{
+    padding-right: 24px;
+    padding-left:8px;
+    color: #1DA1F2;
+    font-weight: bolder;
+  }
+  
+  .btn-submit-logout:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .to-logout{
+      margin-left: 2%;
+  }
+  .nav__search{
+      margin-left: 4%;
+      flex: 0.3;
+  }
